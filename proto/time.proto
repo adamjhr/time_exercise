@@ -1,0 +1,12 @@
+syntax = "proto3";
+option go_package = "./";
+
+service Time {
+    rpc GetCurrentTime (TimeRequest) returns (TimeReply) {}
+}
+
+message TimeRequest {}
+
+message TimeReply {
+    string Time = 1;
+}
